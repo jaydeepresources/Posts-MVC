@@ -41,6 +41,19 @@ public class HomeController {
 
 		return new ModelAndView("add", "command", new Post());
 	}
+	
+		// @RequestMapping(value = "/add", method = RequestMethod.GET)
+	/*
+	 * public ModelAndView addPost(@RequestParam(value = "title") String title,...)
+	 * {
+	 * 
+	 * int res = impl.add(new Post(0,title,body));
+	 * 
+	 * String result = (res == 1) ? "post added" : "post couldn't be added";
+	 * ModelAndView view = new ModelAndView("result"); 
+	 * view.addObject("result",result); 
+	 * return view;
+	 */
 
 	@RequestMapping(value = "/addpost", method = RequestMethod.POST)
 	public ModelAndView addPost(@ModelAttribute("post") Post post) {
